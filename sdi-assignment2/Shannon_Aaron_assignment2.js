@@ -19,9 +19,9 @@ var myReturnBoolean = true;
 //This will check to see if the players name is worthy!
 var myProcedure = function(name){
     if(name !== "Chomp"){
-        console.log("Did your parent's give you that name? I'm sorry!");
+        console.log("Did your parent's give you that name? What a silly name. I'm sorry!");
     }else{
-        console.log("Now that's a powerful name.");
+        console.log("\"Chomp\" Now that's a powerful name.");
     };    
 };
 
@@ -34,10 +34,10 @@ var booFunc = function(arg, i){
         arg = confirm("Are you sure?");
         if (arg !== true) {
             //code
-            console.log("Come on, your answer can't be " + arg + ". That just ruins it.");
+            console.log("Come on, your answer can't be " + arg + ".\nThat just ruins all the fun.\nNow I'm just going to keep buggin you..");
             i++;
         }else{
-            console.log("Thank you for choosing " + arg + ". This pleases \"Chomp\". It only took "+ i +" tries.");
+            console.log("Thank you for choosing " + arg + ". This pleases \"Chomp\". It only took "+ i +" tries to understand what I'm trying to do here.");
             return arg;
             break;
         }
