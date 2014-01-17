@@ -47,7 +47,7 @@ var booFunc = function(arg, i){
 //This section will be a number function.
 //Allowing it to calculate the players starting health.
 var numFunc = function(num){
-        var random = prompt("Enter a random code. It can be anything, I don't care.");
+        var random = prompt("This is to determine your health. Enter a random code. It can be anything, I don't care.");
         for (var i = num; i< random.length; i++) {
             //code
             num += (random.length*(20/100));
