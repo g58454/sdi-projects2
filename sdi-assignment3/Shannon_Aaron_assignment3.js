@@ -17,6 +17,7 @@ var jSon = [{"firstName":" This is Aaron" , "lastName":"Shannon"},
             {"className":"SDI" , "classNumber":"1401"},
             {"workType":"Assignment" , "workNumber":"3"},
             {"compMonth":"January" , "compDate":"23" , "compYear":"2014"}];
+var array = [];
 
 //This will call in the JSON elements
 var startFunc = function(json){
@@ -25,6 +26,12 @@ var startFunc = function(json){
     alert(jSon[2].workType + " " + jSon[2].workNumber);
     alert(jSon[3].compMonth + " " + jSon[3].compDate + ", " + jSon[3].compYear);
 };
+
+var myArray = function(array){
+        array[0] = prompt("What's is the class number?");
+        array[1] = prompt("What year is it?");
+        return array;
+}; 
 
 //This section is for the procedure function.
 //This will check to see if the players name is worthy!
@@ -85,6 +92,7 @@ var stringFunc = function(string1, string2){
 //This is the function calling section.
 //This will follow the procedural flowchart2
 startFunc(jSon);
+myArray(array);
 myProcedure(playerName);
 myBoolean = confirm("Do you want to play?");
 myReturnBoolean = booFunc(myBoolean,3);
@@ -94,3 +102,4 @@ console.log("So just to recap your choices and goodies.");
 console.log("It's " + myReturnBoolean + " you were forced to play.");
 console.log("Your health is at " + myReturnNumber + ".");
 console.log(myReturnString);
+console.log("You answered " + array[0] + ", and " + array[1] + ".");
