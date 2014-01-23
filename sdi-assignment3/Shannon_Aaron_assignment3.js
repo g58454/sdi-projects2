@@ -13,7 +13,18 @@ var myNumber = 0;
 var myReturnNumber = 0;
 var myBoolean = true;
 var myReturnBoolean = true;
+var jSon = [{"firstName":"Aaron" , "lastName":"Shannon"},
+            {"className":"SDI" , "classNumber":"1401"},
+            {"workType":"Assignment" , "workNumber":"3"},
+            {"compMonth":"January" , "compDate":"23" , "compYear":"2014"}];
 
+//This will call in the JSON elements
+var startFunc = function(json){
+    alert(jSon[0].firstName + " " + jSon[0].lastName);
+    alert(jSon[1].className + " " + jSon[1].classNumber);
+    alert(jSon[2].workType + " " + jSon[2].workNumber);
+    alert(jSon[3].compMonth + " " + jSon[3].compDate + ", " + jSon[3].compYear);
+};
 
 //This section is for the procedure function.
 //This will check to see if the players name is worthy!
@@ -39,7 +50,6 @@ var booFunc = function(arg, i){
         }else{
             console.log("Thank you for choosing " + arg + ". This pleases \"Chomp\". It only took "+ i +" tries to understand what I'm trying to do here.");
             return arg;
-            break;
         }
     }
 };
@@ -65,8 +75,10 @@ var stringFunc = function(string1, string2){
     return combine;
 };
 
+
 //This is the function calling section.
 //This will follow the procedural flowchart2
+startFunc(jSon);
 myProcedure(playerName);
 myBoolean = confirm("Do you want to play?");
 myReturnBoolean = booFunc(myBoolean,3);
