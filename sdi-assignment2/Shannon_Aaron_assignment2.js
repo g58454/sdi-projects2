@@ -5,7 +5,7 @@
 //January 16, 2014
 
 //Declaring global varibles
-var playerName = prompt("What is your name, player?/nI need to know, so I can make fun of your ridiculous name.");
+var playerName = prompt("What is your name, player?\nI need to know, so I can make fun of your ridiculous name.");
 var myString1 = "Hurray! " + playerName +", you have accomplised something. ";
 var myString2 = "You should give yourself a pat on the back!";
 var myReturnString = "I hope this works";
