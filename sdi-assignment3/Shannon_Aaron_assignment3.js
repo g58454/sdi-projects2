@@ -13,7 +13,7 @@ var myNumber = 0;
 var myReturnNumber = 0;
 var myBoolean = true;
 var myReturnBoolean = true;
-var jSon = [{"firstName":"Aaron" , "lastName":"Shannon"},
+var jSon = [{"firstName":" This is Aaron" , "lastName":"Shannon"},
             {"className":"SDI" , "classNumber":"1401"},
             {"workType":"Assignment" , "workNumber":"3"},
             {"compMonth":"January" , "compDate":"23" , "compYear":"2014"}];
