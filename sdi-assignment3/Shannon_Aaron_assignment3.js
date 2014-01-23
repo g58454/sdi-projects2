@@ -31,6 +31,12 @@ var startFunc = function(json){
 var myProcedure = function(name){
     if(name !== "Chomp"){
         console.log("Did your parent's give you that name? What a silly name. I'm sorry!");
+        if (name === "Aaron") {
+            //code
+            consol.log("That's my developers name! Cool!");
+        }else{
+            
+        }
     }else{
         console.log("\"Chomp\" Now that's a powerful name.");
     };    
