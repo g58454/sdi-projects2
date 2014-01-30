@@ -33,7 +33,31 @@ var myPhoneNumber = function(num){
 };
 
 //This will check to see if the "Email Address" follows a pattern
-
+var myEmailAddress = function(email){
+    check1 = email.indexOf("@");
+    check2 = email.lastIndexOf(".");
+    if (email === "") {
+        console.log("This is not an email address.");
+        if (check1 === -1||check2 === -1) {
+            console.log("This is not an email address.");
+            if (check2 < check1) {
+                console.log("This is not an email address.");
+                if (check2 - check1 === 1) {
+                    console.log("This is not an email address.");
+                }else{
+                    
+                }
+            }else{
+                
+            }
+        }else{
+            
+        }
+    }else{
+        return true;
+    }
+    
+};
 
 //Function calling
 var returnPhoneNumber = myPhoneNumber(prompt("Enter a phone number: *please use the '-' format*"));
