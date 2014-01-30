@@ -36,14 +36,11 @@ var myPhoneNumber = function(num){
 var myEmailAddress = function(email){
     check1 = email.indexOf("@");
     check2 = email.lastIndexOf(".");
-    if (email === "") {
-        console.log("This is not an email address.");
-        if (check1 === -1||check2 === -1) {
-            console.log("This is not an email address.");
-            if (check2 < check1) {
-                console.log("This is not an email address.");
-                if (check2 - check1 === 1) {
-                    console.log("This is not an email address.");
+    if (email !== "") {
+        if (check1 !== -1||check2 !== -1) {
+            if (check2 > check1) {
+                if (check2 - check1 !== 1) {
+                    return true;
                 }else{
                     
                 }
@@ -54,7 +51,8 @@ var myEmailAddress = function(email){
             
         }
     }else{
-        return true;
+        console.log("This is not an email address.");
+        return false;
     }
     
 };
@@ -62,3 +60,5 @@ var myEmailAddress = function(email){
 //Function calling
 var returnPhoneNumber = myPhoneNumber(prompt("Enter a phone number: *please use the '-' format*"));
 console.log(returnPhoneNumber);
+var returnEmailAddress = myEmailAddress(prompt("Please enter your email address:"));
+console.log(returnEmailAddress);
