@@ -76,8 +76,37 @@ var myUrl = function(url){
     }
 };
 
+//This function will capitalize the first letter and return it back
+var myCaptialName = function(name){
+    var firstName = name.substring(0, name.indexOf(" "));
+    var lastName = name.substring(name.indexOf(" ")+1, name.length);
+    var capitalFirstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1, firstName.length);
+    var capitalLastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1, lastName.length);
+    return (capitalFirstName + " " + capitalLastName);
+};
+
+//This function will format the decimal place of any number to the thenth's place
+var myDecimalFormat = function(num1, num2){
+    var total = num1 + num2;
+    var totalFixed = total.toFixed(1);
+    return totalFixed;
+};
+
+//This will search an Array for the smallest number
+var mySmallestNumber = function(array){
+    var myArray = [0,25,10,3,7,5,36,116,17,57,320,255];
+    for (var i = 0; i < myArray.length; i++){
+        if (myArray[i] < array) {
+            var mySecondArray = myArray[i];
+            consol.log(mySecondArray);
+        }else{
+            
+        }
+    }
+};
+
 //Function calling
-var returnPhoneNumber = myPhoneNumber(prompt("Enter a phone number: *please use the '-' format*"));
+/*var returnPhoneNumber = myPhoneNumber(prompt("Enter a phone number: *please use the '-' format*"));
 console.log(returnPhoneNumber);
 
 var returnEmailAddress = myEmailAddress(prompt("Please enter your email address:"));
@@ -85,3 +114,13 @@ console.log(returnEmailAddress);
 
 var myReturnUrl = myUrl(prompt("Enter in a url:"));
 console.log(myReturnUrl);
+
+var myReturnCapitalName = myCaptialName(prompt("What is your first and last name?"));
+console.log(myReturnCapitalName);
+
+var myReturnDecimal = myDecimalFormat(3.1449879879879, 32.1628928098);
+console.log(myReturnDecimal);*/
+
+var myReturnArray = mySmallestNumber(prompt("Pick a number: 1 - 400"));
+console.log(myReturnArray);
+
