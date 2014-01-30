@@ -13,12 +13,14 @@ var myNumber = 26;
 
 //This function will test to see if the "Phone Number" that is typed in, is indeed a phonenumber
 var myPhoneNumber = function(num){
-    var check = num.split("-");
-    var check = num.split(" ");
-    
-    if (check[0].length === 3){
-        if (check[1].length === 3) {
-            if (check[2].length === 4) {
+    var areaCode = num.substring(0,num.indexOf("-"));
+    var startNum = num.substring(num.indexOf("-")+1, num.lastIndexOf("-"));
+    var endNum = num.substring(num.lastIndexOf("-")+1, num.length);
+    if (areaCode.length === 3){
+        console.log(true);
+        if (startNum.length === 3) {
+            console.log(true);
+            if (endNum.length === 4) {
                 console.log("This is a phone number.");
                 return true;
             }else{
@@ -42,13 +44,16 @@ var myEmailAddress = function(email){
                 if (check2 - check1 !== 1) {
                     return true;
                 }else{
-                    
+                    console.log("This is not an email address.");
+                    return false;
                 }
             }else{
-                
+                console.log("This is not an email address.");
+                return false;
             }
         }else{
-            
+            console.log("This is not an email address.");
+            return false;
         }
     }else{
         console.log("This is not an email address.");
