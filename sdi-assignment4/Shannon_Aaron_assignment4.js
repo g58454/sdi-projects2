@@ -24,12 +24,13 @@ var myPhoneNumber = function(num){
                 console.log("This is a phone number.");
                 return true;
             }else{
-                return false;
+                
             }
         }else{
-            return false;
+            
         }
     }else{
+        console.log("This is not a phone number.");
         return false;
     }    
 };
@@ -42,18 +43,16 @@ var myEmailAddress = function(email){
         if (check1 !== -1||check2 !== -1) {
             if (check2 > check1) {
                 if (check2 - check1 !== 1) {
+                    console.log("This is an Email Address.");
                     return true;
                 }else{
-                    console.log("This is not an email address.");
-                    return false;
+                    
                 }
             }else{
-                console.log("This is not an email address.");
-                return false;
+                
             }
         }else{
-            console.log("This is not an email address.");
-            return false;
+        
         }
     }else{
         console.log("This is not an email address.");
@@ -62,8 +61,27 @@ var myEmailAddress = function(email){
     
 };
 
+//This funciton tests for a URL.
+var myUrl = function(url){
+    var start = url.substring(0, url.indexOf(":")+1);
+    if (start === "http:") {
+    
+    }else{
+        if (start === "https:") {
+            console.log("This is a URL.");
+        }else{
+            console.log("This is not a URL.");
+            return false;
+        }
+    }
+};
+
 //Function calling
 var returnPhoneNumber = myPhoneNumber(prompt("Enter a phone number: *please use the '-' format*"));
 console.log(returnPhoneNumber);
+
 var returnEmailAddress = myEmailAddress(prompt("Please enter your email address:"));
 console.log(returnEmailAddress);
+
+var myReturnUrl = myUrl(prompt("Enter in a url:"));
+console.log(myReturnUrl);
