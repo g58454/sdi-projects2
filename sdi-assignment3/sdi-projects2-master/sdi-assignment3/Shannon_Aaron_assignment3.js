@@ -102,4 +102,4 @@ console.log("So just to recap your choices and goodies.");
 console.log("It's " + myReturnBoolean + " you were forced to play.");
 console.log("Your health is at " + myReturnNumber + ".");
 console.log(myReturnString);
-console.log("You answered " + array[0] + ", and " + array[1] + ". But remember I said it wat 1401 and 2014 at first");
+console.log("You answered " + array[0] + ", and " + array[1] + ".");
