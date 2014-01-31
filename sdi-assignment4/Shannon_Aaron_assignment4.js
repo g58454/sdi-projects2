@@ -46,13 +46,16 @@ var myEmailAddress = function(email){
                     console.log("This is an Email Address.");
                     return true;
                 }else{
-                    
+                   console.log("This is not an email address.");
+                   return false;
                 }
             }else{
-                
+                console.log("This is not an email address.");
+                return false;
             }
         }else{
-        
+            console.log("This is not an email address.");
+            return false;
         }
     }else{
         console.log("This is not an email address.");
@@ -65,7 +68,7 @@ var myEmailAddress = function(email){
 var myUrl = function(url){
     var start = url.substring(0, url.indexOf(":")+1);
     if (start === "http:") {
-    
+        console.log("That is a URL");
     }else{
         if (start === "https:") {
             console.log("This is a URL.");
@@ -93,15 +96,13 @@ var myDecimalFormat = function(num1, num2){
 };
 
 //This will search an Array for the smallest number
-var mySmallestNumber = function(array){
-    var myArray = [0,25,10,3,7,5,36,116,17,57,320,255];
-    for (var i = 0; i < myArray.length; i++){
-        if (myArray[i] < array) {
-            var mySecondArray = myArray[i];
-            consol.log(mySecondArray);
-        }else{
-            
-        }
+var myParse = function(pass){
+    var newPass = parseFloat(pass);
+    if (typeof(newPass) === "number") {
+        console.log("This is a number.");
+        return newPass;
+    }else{
+        console.log("This is not a number.");
     }
 };
 
@@ -121,6 +122,6 @@ console.log(myReturnCapitalName);
 var myReturnDecimal = myDecimalFormat(3.1449879879879, 32.1628928098);
 console.log(myReturnDecimal);*/
 
-var myReturnArray = mySmallestNumber(prompt("Pick a number: 1 - 400"));
-console.log(myReturnArray);
+var myReturnParse = myParse(prompt("Pick a number, any number"));
+console.log(myReturnParse + " This is a true number.");
 
